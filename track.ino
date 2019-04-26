@@ -232,37 +232,8 @@ void setup()
 
 void loop()
 {
-//
-//     pid(line,maxSpeed,KP,KI,KD);
-//   brakes_contour(800);
-  int position = Elsa.readLine(sensorValues, LS_EMITTERS_ON, linea, flanco_color, en_linea, noise);
-  ////
-  //////
-  //////
-  // Elsa.read(sensorValues);
-  //
-  for (unsigned char i = 0; i < NUM_SENSORS; i++)
-  {
-    Serial.print(sensorValues[i]);
-    Serial.print('\t');
-  }
-  // position = Elsa.readLine(sensorValues,LS_EMITTERS_ON, linea, flanco_color, en_linea, noise);
-  //Serial.println(); // uncomment this line if you are using raw values
-  Serial.println(position); // comment this line out if you are using raw values
 
-//  delay(250);
-  // turn_left(1000);
-  // turn_right(1000);
- 
-//  digitalWrite(le1, HIGH);
-//  digitalWrite(le2, LOW);
-//  digitalWrite(ri1, HIGH);
-//  digitalWrite(ri2, LOW);
-//  analogWrite(pwmd, 250);
-//  analogWrite(pwmi, 250);
-// motor_run(255,255);
-
-
-
+    pid(line,maxSpeed,KP,KI,KD);
+  brakes_contour(800);
 
 }
